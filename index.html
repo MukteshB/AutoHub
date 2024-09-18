@@ -4,60 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Hub Visitor Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Visitor Form</h1>
-    <form action="{{ url_for('submit') }}" method="POST">
-        <label for="purpose">Purpose of Visit:</label>
-        <select name="purpose">
-            <option>New Purchase</option>
-            <option>Used Car Exchange</option>
-            <option>Service & Body Shop</option>
-            <option>Accessories</option>
-            <option>Genuine Parts</option>
-            <option>Insurance Renewal</option>
-        </select><br><br>
+    <div class="container">
+        <h1>Auto Hub Visitor Form</h1>
+        <form action="{{ url_for('submit') }}" method="POST">
+            <label for="purpose">Purpose of Visit:</label>
+            <select name="purpose" required>
+                <option>New Purchase</option>
+                <option>Used Car Exchange</option>
+                <option>Service & Body Shop</option>
+                <option>Accessories</option>
+                <option>Genuine Parts</option>
+                <option>Insurance Renewal</option>
+            </select>
 
-        <label for="brand">Car SPA Brand:</label>
-        <select name="brand">
-            <option>Toyota</option>
-            <option>Lexus</option>
-            <option>Kia</option>
-            <option>Ford</option>
-            <option>Audi</option>
-            <option>Porsche</option>
-            <option>MAN</option>
-            <option>Hino</option>
-            <option>Komatsu</option>
-            <option>JCB</option>
-            <option>ATS-ELGI</option>
-            <option>L&T</option>
-        </select><br><br>
+            <label for="brand">Car SPA Brand:</label>
+            <select name="brand" required>
+                <option>Toyota</option>
+                <option>Lexus</option>
+                <option>Kia</option>
+                <option>Ford</option>
+                <option>Audi</option>
+                <option>Porsche</option>
+                <option>MAN</option>
+                <option>Hino</option>
+                <option>Komatsu</option>
+                <option>JCB</option>
+                <option>ATS-ELGI</option>
+                <option>L&T</option>
+            </select>
 
-        <label for="model">Model:</label>
-        <input type="text" name="model" required><br><br>
+            <label for="model">Model:</label>
+            <input type="text" name="model" required>
 
-        <label for="city">City:</label>
-        <select name="city">
-            <option>City1</option>
-            <option>City2</option>
-            <option>City3</option>
-            <option>City4</option>
-            <option>City5</option>
-            <option>City6</option>
-        </select><br><br>
+            <label for="city">City:</label>
+            <select name="city" required>
+                <option>City1</option>
+                <option>City2</option>
+                <option>City3</option>
+                <option>City4</option>
+                <option>City5</option>
+                <option>City6</option>
+            </select>
 
-        <label for="branch">Branch:</label>
-        <select name="branch">
-            <option>Main Branch</option>
-            <option>Sub Branch</option>
-            <option>Starlight Workshop</option>
-        </select><br><br>
+            <label for="branch">Branch:</label>
+            <select name="branch" required>
+                <option>Main Branch</option>
+                <option>Sub Branch</option>
+                <option>Starlight Workshop</option>
+            </select>
 
-        <label for="mobile_number">Mobile Number:</label>
-        <input type="text" name="mobile_number" required><br><br>
+            <label for="mobile_number">Mobile Number:</label>
+            <input type="text" name="mobile_number" required>
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
